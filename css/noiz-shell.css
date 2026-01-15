@@ -1,0 +1,134 @@
+:root {
+  --noiz-rail-height: 64px;
+  --noiz-left-width: 280px;
+  --noiz-right-width: 320px;
+  --noiz-surface: #121417;
+  --noiz-surface-2: #171b20;
+  --noiz-border: #242a31;
+  --noiz-text: #e5e7eb;
+  --noiz-muted: #9aa3ad;
+  --noiz-accent: #5c7cfa;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #0c0e11;
+  color: var(--noiz-text);
+}
+
+.noiz-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.noiz-rail {
+  height: var(--noiz-rail-height);
+  background: #0f1318;
+  border-bottom: 1px solid var(--noiz-border);
+}
+
+.noiz-rail .navbar-brand {
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.noiz-shell {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  background: var(--noiz-surface);
+}
+
+.noiz-panel {
+  min-height: 0;
+  overflow: auto;
+  background: var(--noiz-surface);
+}
+
+.noiz-panel-left {
+  width: var(--noiz-left-width);
+  border-right: 1px solid var(--noiz-border);
+}
+
+.noiz-panel-right {
+  width: var(--noiz-right-width);
+  border-left: 1px solid var(--noiz-border);
+  background: var(--noiz-surface-2);
+}
+
+.noiz-panel-center {
+  flex: 1;
+  min-width: 0;
+}
+
+.noiz-slot-header {
+  border-bottom: 1px solid var(--noiz-border);
+}
+
+.noiz-slot-header,
+.noiz-slot-content,
+.noiz-panel-left,
+.noiz-panel-right {
+  padding: 1.5rem;
+}
+
+.noiz-placeholder {
+  color: var(--noiz-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+.noiz-left-nav {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.noiz-left-nav li + li {
+  margin-top: 0.75rem;
+}
+
+.noiz-left-nav a {
+  color: var(--noiz-text);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  display: block;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.noiz-left-nav a:hover {
+  background: rgba(92, 124, 250, 0.18);
+  color: #fff;
+}
+
+.noiz-slot-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.noiz-card {
+  border: 1px solid var(--noiz-border);
+  background: #151a20;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .noiz-shell {
+    flex-direction: column;
+  }
+
+  .noiz-panel-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--noiz-border);
+  }
+}

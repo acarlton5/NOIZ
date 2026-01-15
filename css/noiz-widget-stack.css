@@ -1,0 +1,65 @@
+.noiz-widget-stack {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.noiz-widget {
+  border: 1px solid var(--noiz-border);
+  border-radius: 0.9rem;
+  background: #11151b;
+  padding: 1.25rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.noiz-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.noiz-widget-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--noiz-muted);
+  margin: 0;
+}
+
+.noiz-widget-action {
+  font-size: 0.8rem;
+  color: var(--noiz-accent);
+  text-decoration: none;
+}
+
+.noiz-widget-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.noiz-widget-list li + li {
+  margin-top: 0.75rem;
+}
+
+.noiz-widget-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.65rem;
+  padding: 0.6rem 0.75rem;
+}
+
+.noiz-widget-item span {
+  font-size: 0.9rem;
+}
+
+.noiz-widget-badge {
+  background: rgba(92, 124, 250, 0.2);
+  color: #c9d4ff;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
