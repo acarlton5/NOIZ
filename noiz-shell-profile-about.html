@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOIZ | Profile About Shell</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/noiz-shell.css">
+  <link rel="stylesheet" href="css/noiz-widget-stack.css">
+</head>
+<body>
+  <div class="noiz-page">
+    <header class="noiz-rail">
+      <nav class="navbar navbar-dark h-100 px-3">
+        <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#noizLeftPanel" aria-controls="noizLeftPanel">
+          Menu
+        </button>
+        <a class="navbar-brand ms-2" href="#">NOIZ</a>
+        <div class="ms-auto d-flex gap-2">
+          <button class="btn btn-outline-light btn-sm">Notify</button>
+          <button class="btn btn-primary btn-sm">Create</button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="noiz-shell">
+      <aside class="noiz-panel noiz-panel-left d-none d-lg-flex flex-column" data-slot="left.panel">
+        <div class="noiz-placeholder">Left.Panel</div>
+        <div class="noiz-card">
+          <p class="mb-1 fw-semibold">Profile Navigation</p>
+          <p class="mb-0 text-secondary small">Desktop-only rail content.</p>
+        </div>
+        <ul class="noiz-left-nav">
+          <li><a href="#">Timeline</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Friends</a></li>
+          <li><a href="#">Photos</a></li>
+        </ul>
+      </aside>
+
+      <main class="noiz-panel noiz-panel-center" data-slot="center.panel">
+        <section class="noiz-slot-header" data-slot="center.header">
+          <div class="noiz-placeholder">Center.Header</div>
+          <div class="noiz-card">
+            <h2 class="h5 mb-2">Profile Header Slot</h2>
+            <p class="mb-0 text-secondary">Replace with a NOIZ module (cover, stats, actions).</p>
+          </div>
+        </section>
+        <section class="noiz-slot-content" data-slot="center.content">
+          <div class="noiz-placeholder">Center.Content</div>
+          <div class="noiz-card">
+            <h3 class="h6 mb-2">About Content Slot</h3>
+            <p class="mb-0 text-secondary">Profile about modules render here.</p>
+          </div>
+          <div class="noiz-card">
+            <h3 class="h6 mb-2">Activity Slot</h3>
+            <p class="mb-0 text-secondary">Additional content modules mount here.</p>
+          </div>
+        </section>
+      </main>
+
+      <aside class="noiz-panel noiz-panel-right d-none d-lg-flex flex-column" data-slot="right.panel">
+        <div class="noiz-placeholder">Right.Panel</div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="noizLeftPanel" aria-labelledby="noizLeftPanelLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="noizLeftPanelLabel">Navigation</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" data-slot="left.panel.mobile">
+      <div class="noiz-card mb-3">
+        <p class="mb-1 fw-semibold">Profile Navigation</p>
+        <p class="mb-0 text-secondary small">Mobile offcanvas.</p>
+      </div>
+      <ul class="noiz-left-nav">
+        <li><a href="#">Timeline</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Friends</a></li>
+        <li><a href="#">Photos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-slot="overlay.modal"></div>
+  <div data-slot="overlay.toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/noiz-widget-stack.js"></script>
+  <script src="js/noiz-shell.js"></script>
+</body>
+</html>
