@@ -17,7 +17,7 @@ const loadComponent = async (path) => {
 
 const setActiveNavigationItem = (root) => {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const links = root.querySelectorAll('.menu-item-link');
+  const links = root.querySelectorAll('.menu-item-link, .noiz-rail__item');
 
   links.forEach((link) => {
     const href = link.getAttribute('href');
@@ -26,7 +26,7 @@ const setActiveNavigationItem = (root) => {
     }
 
     if (href === currentPath) {
-      const menuItem = link.closest('.menu-item');
+      const menuItem = link.closest('.menu-item') || link.closest('.noiz-rail__item');
       if (menuItem) {
         menuItem.classList.add('active');
       }
@@ -34,19 +34,23 @@ const setActiveNavigationItem = (root) => {
   });
 };
 
-const hydrateNavigationWidgets = async () => {
-  const placeholders = document.querySelectorAll('[data-component="navigation-widgets"]');
+const hydrateComponents = async (root = document) => {
+  const placeholders = Array.from(root.querySelectorAll('[data-component]'));
   if (!placeholders.length) {
     return;
   }
 
   try {
-    const html = await loadComponent('components/navigation-widgets.html');
-    placeholders.forEach((placeholder) => {
+    await Promise.all(placeholders.map(async (placeholder) => {
+      const name = placeholder.getAttribute('data-component');
+      if (!name) {
+        return;
+      }
+      const html = await loadComponent(`components/${name}.html`);
       placeholder.outerHTML = html;
-    });
+    }));
 
-    document.querySelectorAll('.navigation-widget, .navigation-widget-mobile, .navigation-widget-small')
+    document.querySelectorAll('.navigation-widget, .navigation-widget-mobile, .navigation-widget-small, .noiz-left-rail')
       .forEach((widget) => setActiveNavigationItem(widget));
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -54,6 +58,7 @@ const hydrateNavigationWidgets = async () => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  hydrateNavigationWidgets();
+document.addEventListener('DOMContentLoaded', async () => {
+  await hydrateComponents();
+  await hydrateComponents();
 });

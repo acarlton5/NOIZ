@@ -1,0 +1,95 @@
+.noiz-header__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  height: 64px;
+  padding: 0 20px;
+}
+
+.noiz-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.noiz-brand__mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--noiz-accent-grad);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+}
+
+.noiz-header__actions,
+.noiz-header__user {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.noiz-icon-button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--noiz-text-1);
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.noiz-icon-button:hover {
+  background: var(--noiz-hover);
+  border-color: var(--noiz-border);
+  color: var(--noiz-text-0);
+}
+
+.noiz-button {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.noiz-button--primary {
+  background: var(--noiz-accent-grad);
+  color: #fff;
+}
+
+.noiz-user-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--noiz-bg-2);
+  border: 1px solid var(--noiz-border);
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.noiz-user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--noiz-accent-0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.noiz-user-name {
+  font-size: 0.85rem;
+  color: var(--noiz-text-1);
+}

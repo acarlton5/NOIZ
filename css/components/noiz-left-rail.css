@@ -1,0 +1,52 @@
+.noiz-rail {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  height: 100%;
+}
+
+.noiz-rail__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--noiz-text-1);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.noiz-rail__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.noiz-rail__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--noiz-text-1);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.noiz-rail__item:hover {
+  background: var(--noiz-hover);
+  color: var(--noiz-text-0);
+}
+
+.noiz-rail__item.active {
+  background: var(--noiz-active);
+  border-color: var(--noiz-accent-0);
+  color: var(--noiz-text-0);
+}
+
+.noiz-rail__icon {
+  width: 24px;
+  text-align: center;
+  font-size: 0.9rem;
+}
