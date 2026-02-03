@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- bootstrap 4.3.1 -->
+  <!-- bootstrap 5.3.3 -->
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <!-- styles -->
   <link rel="stylesheet" href="css/styles.min.css">
-  <!-- simplebar styles -->
-  <link rel="stylesheet" href="css/vendor/simplebar.css">
+  <link rel="stylesheet" href="css/components/navigation-widget.css">
   <!-- favicon -->
   <link rel="icon" href="img/favicon.ico">
   <title>Vikinger | Logged Out and Icons</title>
@@ -54,51 +53,9 @@
   </div>
   <!-- /PAGE LOADER -->
 
-  <!-- NAVIGATION WIDGET -->
-  <nav id="navigation-widget-mobile" class="navigation-widget navigation-widget-mobile sidebar left hidden" data-simplebar>
-    <!-- NAVIGATION WIDGET CLOSE BUTTON -->
-    <div class="navigation-widget-close-button">
-      <!-- NAVIGATION WIDGET CLOSE BUTTON ICON -->
-      <svg class="navigation-widget-close-button-icon icon-back-arrow">
-        <use xlink:href="#svg-back-arrow"></use>
-      </svg>
-      <!-- NAVIGATION WIDGET CLOSE BUTTON ICON -->
-    </div>
-    <!-- /NAVIGATION WIDGET CLOSE BUTTON -->
-
-    <!-- NAVIGATION WIDGET SECTION TITLE -->
-    <p class="navigation-widget-section-title space-top">Main Links</p>
-    <!-- /NAVIGATION WIDGET SECTION TITLE -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">Home</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">Careers</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">Faqs</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">About Us</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">Our Blog</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">Contact Us</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">Privacy Policy</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-  </nav>
-  <!-- /NAVIGATION WIDGET -->
+  <!-- NAVIGATION WIDGETS -->
+  <div data-component="navigation-widgets"></div>
+  <!-- /NAVIGATION WIDGETS -->
 
   <!-- HEADER -->
   <header class="header logged-out">
@@ -631,10 +588,9 @@
 
 <!-- app -->
 <script src="js/utils/app.js"></script>
+<script src="js/utils/components.js"></script>
 <!-- page loader -->
 <script src="js/utils/page-loader.js"></script>
-<!-- simplebar -->
-<script src="js/vendor/simplebar.min.js"></script>
 <!-- liquidify -->
 <script src="js/utils/liquidify.js"></script>
 <!-- XM_Plugins -->
