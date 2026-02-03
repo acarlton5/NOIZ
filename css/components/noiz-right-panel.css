@@ -1,0 +1,99 @@
+.noiz-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.noiz-panel {
+  background: var(--noiz-bg-2);
+  border: 1px solid var(--noiz-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.noiz-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.noiz-panel__header h3 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.noiz-panel__status {
+  font-size: 0.75rem;
+  color: var(--noiz-success);
+}
+
+.noiz-panel__profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.noiz-panel__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--noiz-accent-0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.noiz-panel__name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.noiz-panel__meta {
+  margin: 4px 0 0;
+  color: var(--noiz-text-2);
+  font-size: 0.8rem;
+}
+
+.noiz-panel__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.noiz-panel__stat {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.noiz-panel__label {
+  margin: 4px 0 0;
+  font-size: 0.75rem;
+  color: var(--noiz-text-2);
+}
+
+.noiz-panel__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.noiz-panel__list-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.noiz-panel__list-meta {
+  margin: 4px 0 0;
+  color: var(--noiz-text-2);
+  font-size: 0.75rem;
+}

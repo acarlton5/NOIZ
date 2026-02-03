@@ -1,0 +1,45 @@
+:root {
+  --noiz-bg-0: #0b0d14;
+  --noiz-bg-1: #121826;
+  --noiz-bg-2: #1a2233;
+  --noiz-border: #283246;
+  --noiz-text-0: #f4f6ff;
+  --noiz-text-1: #b5c0d4;
+  --noiz-text-2: #7e889c;
+  --noiz-accent-0: #7b5cff;
+  --noiz-accent-1: #32d3ff;
+  --noiz-accent-grad: linear-gradient(135deg, #7b5cff 0%, #32d3ff 100%);
+  --noiz-success: #39d98a;
+  --noiz-warning: #ffb020;
+  --noiz-danger: #ff5c7a;
+  --noiz-info: #3dd5f3;
+  --noiz-hover: #222c42;
+  --noiz-active: #2c3751;
+  --noiz-focus: #9bb8ff;
+}
+
+.noiz-app-shell {
+  background: var(--noiz-bg-0);
+  color: var(--noiz-text-0);
+  font-family: "Inter", "Rajdhani", sans-serif;
+}
+
+.noiz-app-shell a {
+  color: inherit;
+}
+
+.noiz-app-shell ::selection {
+  background: var(--noiz-accent-0);
+  color: #fff;
+}
+
+.noiz-app-shell button,
+.noiz-app-shell input {
+  color: inherit;
+  font-family: inherit;
+}
+
+.noiz-app-shell :focus-visible {
+  outline: 2px solid var(--noiz-focus);
+  outline-offset: 2px;
+}

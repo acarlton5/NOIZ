@@ -1,0 +1,37 @@
+.noiz-main .content-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.noiz-main .widget-box,
+.noiz-main .post-preview {
+  background: var(--noiz-bg-2);
+  border: 1px solid var(--noiz-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.noiz-main .widget-box-title,
+.noiz-main .post-preview-title {
+  color: var(--noiz-text-0);
+}
+
+.noiz-main .widget-box-text,
+.noiz-main .post-preview-text,
+.noiz-main .post-preview-text-small {
+  color: var(--noiz-text-1);
+}
+
+.noiz-main .section-header-info .section-title,
+.noiz-main .section-header-info .section-pretitle {
+  color: var(--noiz-text-0);
+}
+
+.noiz-main .section-header-info .section-pretitle {
+  color: var(--noiz-text-2);
+}
+
+.noiz-main .button {
+  background: var(--noiz-accent-0);
+  border-radius: 10px;
+}
