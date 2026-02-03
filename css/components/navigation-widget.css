@@ -1,0 +1,20 @@
+.navigation-widget .menu,
+.navigation-widget .menu-main,
+.navigation-widget .section-menu,
+.navigation-widget-mobile .menu,
+.navigation-widget-small .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-widget,
+.navigation-widget-mobile {
+  overflow-y: auto;
+}
+
+.navigation-widget-small .menu-item,
+.navigation-widget .menu-item,
+.navigation-widget-mobile .menu-item {
+  margin: 0;
+}
