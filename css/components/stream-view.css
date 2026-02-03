@@ -1,0 +1,382 @@
+.stream-view-grid {
+  margin-top: 24px;
+}
+
+.stream-channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stream-channel-list .button {
+  width: 100%;
+  justify-content: center;
+}
+
+.stream-view-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.stream-view-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stream-view-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stream-view-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.stream-view-meta-separator {
+  opacity: 0.6;
+}
+
+.stream-view-live {
+  color: #ff5d5d;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.stream-view-viewers {
+  color: inherit;
+}
+
+.stream-view-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stream-view-player {
+  padding: 0;
+  overflow: hidden;
+}
+
+.stream-view-player-frame {
+  width: 100%;
+}
+
+.stream-view-player-placeholder {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #0c0d12;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stream-view-state {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.stream-view-player[data-stream-state="live"] .stream-view-state--live {
+  display: flex;
+}
+
+.stream-view-player[data-stream-state="offline"] .stream-view-state--offline {
+  display: flex;
+}
+
+.stream-view-player[data-stream-state="loading"] .stream-view-state--loading {
+  display: flex;
+}
+
+.stream-view-live-badge,
+.stream-view-offline-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.stream-view-live-badge {
+  background: rgba(255, 93, 93, 0.2);
+  color: #ff5d5d;
+  border: 1px solid rgba(255, 93, 93, 0.5);
+}
+
+.stream-view-offline-badge {
+  background: rgba(147, 153, 171, 0.2);
+  color: #c3c7d4;
+  border: 1px solid rgba(147, 153, 171, 0.4);
+}
+
+.stream-view-loading-bar {
+  width: 180px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+  animation: stream-loading 1.2s infinite ease-in-out;
+}
+
+@keyframes stream-loading {
+  0% { transform: translateX(-20px); opacity: 0.5; }
+  50% { transform: translateX(20px); opacity: 1; }
+  100% { transform: translateX(-20px); opacity: 0.5; }
+}
+
+.stream-view-player-controls {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.stream-view-player:hover .stream-view-player-controls {
+  opacity: 1;
+}
+
+.stream-view-control {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.stream-view-tabs {
+  margin-top: 18px;
+}
+
+.stream-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stream-timeline-entry {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.stream-timeline-entry .user-avatar {
+  flex-shrink: 0;
+}
+
+.stream-timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stream-timeline-title {
+  font-weight: 600;
+}
+
+.stream-timeline-meta {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.stream-chat-panel .widget-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stream-chat-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.stream-chat-viewers {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.stream-chat-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.stream-chat-action {
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.stream-chat-action svg {
+  width: 14px;
+  height: 14px;
+}
+
+.stream-chat-body {
+  flex: 1;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.stream-chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stream-chat-message {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.stream-chat-message.grouped .stream-chat-avatar {
+  visibility: hidden;
+}
+
+.stream-chat-message.grouped {
+  margin-left: 42px;
+}
+
+.stream-chat-message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stream-chat-message-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.stream-chat-message-header .stream-chat-badge {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stream-chat-message-text {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.stream-chat-input {
+  padding: 12px 18px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stream-support-drawer {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: stretch;
+  justify-content: flex-end;
+  z-index: 9999;
+}
+
+.stream-support-drawer.is-active {
+  display: flex;
+}
+
+.stream-support-backdrop {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.stream-support-panel {
+  width: min(420px, 90vw);
+  margin: 40px;
+  align-self: center;
+}
+
+.stream-support-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1365px) {
+  .stream-chat-panel {
+    display: none;
+  }
+
+  body.stream-chat-open .stream-chat-panel {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .stream-view-header-actions {
+    width: 100%;
+  }
+
+  .stream-chat-panel {
+    margin-top: 24px;
+  }
+}
+
+
+.stream-quest-card .progress {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.stream-quest-card .progress-bar {
+  background: linear-gradient(90deg, rgba(120, 102, 255, 0.8), rgba(255, 93, 93, 0.8));
+}
+
+.stream-quest-meta {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+
+.stream-view-status {
+  color: #ff5d5d;
+  font-weight: 600;
+}
+
+.stream-chat-message-time {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+body.stream-chat-collapsed .stream-chat-panel {
+  display: none;
+}
